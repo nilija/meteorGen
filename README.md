@@ -1,4 +1,4 @@
-# meteorGen
+# meteorGen   ----------------------------> za Unix/UBUNTU
 Meteor, generator Grid aplikacija
 
 Zapocinje se sa mtemplateCopy,
