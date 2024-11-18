@@ -1,0 +1,91 @@
+#!/usr/bin/env node
+var fs = require('fs');
+var fs = require('./_node_modules/fs-extra');
+var readline = require('readline');
+
+// Definišemo dozvoljene tipove polja
+var allowedFieldTypes = ['txt', 'mail', 'number', 'password', 'date', 'checkbox', 'radio'];
+
+// Funkcija za unos podataka putem prompt-a
+function promptInput(question, callback) {
+    var rl = readline.createInterface({
+        input: process.stdin,
+        output: process.stdout,
+    });
+
+    rl.question(question, function (answer) {
+        rl.close();
+        callback(answer);
+    });
+}
+
+// Glavna funkcija
+function createFile() {
+    console.log("Unesite podatke za generisanje fajla:");
+
+    // Unos osnovnih informacija
+    promptInput('Unesite naziv kolekcije: ', function (collection) {
+        promptInput('Unesite naslov aplikacije: ', function (title) {
+            promptInput('Unesite naslov za Add modal: ', function (modalTitleAdd) {
+                promptInput('Unesite naslov za View modal: ', function (modalTitleView) {
+                    promptInput('Unesite naslov za Edit modal: ', function (modalTitleEdit) {
+                        promptInput('Unesite naslov za Delete modal: ', function (modalTitleDelete) {
+                            promptInput('Unesite poruku za uspešno dodavanje: ', function (growlSuccessAdd) {
+                                promptInput('Unesite poruku za uspešno uređivanje: ', function (growlSuccessEdit) {
+                                    promptInput('Unesite poruku za uspešno brisanje: ', function (growlSuccessDelete) {
+                                        // Unos polja i tipova
+                                        console.log("\nUnos polja i tipova. Unesite praznu liniju da završite unos.");
+                                        var fields = [];
+                                        function inputField() {
+                                            promptInput('Unesite ime polja: ', function (fieldName) {
+                                                if (!fieldName) {
+                                                    // Završeno
+                                                    var fileContent =
+                                                        'collection=' + collection + '\n' +
+                                                        'title=' + title + '\n' +
+                                                        'modalTitleAdd=' + modalTitleAdd + '\n' +
+                                                        'modalTitleView=' + modalTitleView + '\n' +
+                                                        'modalTitleEdit=' + modalTitleEdit + '\n' +
+                                                        'modalTitleDelete=' + modalTitleDelete + '\n' +
+                                                        'growlSuccessAdd=' + growlSuccessAdd + '\n' +
+                                                        'growlSuccessEdit=' + growlSuccessEdit + '\n' +
+                                                        'growlSuccessDelete=' + growlSuccessDelete + '\n' +
+                                                        '---\n' +
+                                                        fields.join('\n');
+
+                                                    var fileName = collection + '.txt';
+                                                    fs.writeFile(fileName, fileContent, function (err) {
+                                                        if (err) {
+                                                            console.error('Došlo je do greške pri pisanju fajla:', err);
+                                                        } else {
+                                                            console.log('Fajl "' + fileName + '" je uspešno kreiran!');
+                                                        }
+                                                    });
+                                                    return;
+                                                }
+
+                                                promptInput('Unesite tip polja (' + allowedFieldTypes.join(', ') + '): ', function (fieldType) {
+                                                    if (allowedFieldTypes.indexOf(fieldType) === -1) {
+                                                        console.log('Nedozvoljen tip. Pokušajte ponovo.');
+                                                        inputField(); // Ponovo tražimo unos
+                                                    } else {
+                                                        fields.push(fieldName + ',' + fieldType);
+                                                        inputField(); // Sledeći unos
+                                                    }
+                                                });
+                                            });
+                                        }
+                                        inputField();
+                                    });
+                                });
+                            });
+                        });
+                    });
+                });
+            });
+        });
+    });
+}
+
+// Pokrećemo glavnu funkciju
+createFile();

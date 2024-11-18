@@ -1,0 +1,17 @@
+#!/bin/sh
+
+# Pronađi sve .txt fajlove u trenutnom folderu (bez podfoldera)
+TXT_FILES=$(find . -maxdepth 1 -type f -name "*.txt")
+
+# Proveri da li postoje .txt fajlovi u folderu
+if [ -z "$TXT_FILES" ]; then
+  echo "Nema .txt fajlova u trenutnom folderu."
+  exit 1
+fi
+
+# Priprema liste samo naziva fajlova za niz sa zarezom kao separatorom
+BASENAMES=$(for file in $TXT_FILES; do basename "$file"; done | paste -sd "," -)
+
+# Prikaži fajlove u poruci pre pokretanja ./mGen_
+echo "Pokrećem ./mGen_ sa pronađenim fajlovima: $BASENAMES"
+./mGen_ "$BASENAMES"

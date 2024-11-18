@@ -1,0 +1,13 @@
+collection=colfile
+title=My Application Title
+modalTitleAdd=Add New Entry
+modalTitleView=View Entry
+modalTitleEdit=Edit Entry
+modalTitleDelete=Delete Entry
+growlSuccessAdd=Successfully added!
+growlSuccessEdit=Successfully edited!
+growlSuccessDelete=Successfully deleted!
+---
+fieldName1,txt
+fieldName2,txt
+fieldName3,mail

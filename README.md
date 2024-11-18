@@ -1,0 +1,22 @@
+# meteorGen
+Meteor, generator Grid aplikacija
+
+Zapocinje se sa mtemplateCopy,
+kopira .meteor strukturu - projekat i fajlove putem kojih se vrsi generisanje
+
+Korišćenje - mtemplateCopy <direktorijum na /home/x/meteor_gen/gen/ ispod kojeg će biti sajt>
+   Primer:   mtemplateCopy MyApp - napraviće sajt http://localhost:3000 na /home/x/meteor_gen/gen/MyApp
+
+zatim mGenFirst, kreira kostur, stablo projekta
+zatim mGen_c, generator čita imekolekcije.txt (imenovati fajl kao kolekciju koja se generiše),
+čita pojedinačne redove sa imenima polja i generiše redove u odgovarajućim fajlovima JS.
+Prethodno je potrebno instalirati paket line-reader: npm install line-reader
+Opis fajla za kreiranje kolekcije je u template colfile.txt,
+moze se direktno intervenisati u fajlu ili kreirati novi, sa drugim imenom
+pozivanjem scripta  gen_txt ili gen_txt_file
+Unesite ime polja:
+Unesite tip polja (txt, mail, number, password, date, checkbox, radio):
+
+
+TO-DO
+meteor app za kreiranje opisa kolekcije

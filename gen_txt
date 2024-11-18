@@ -1,0 +1,91 @@
+#!/usr/bin/env node
+var fs = require('fs');
+//var prompt = require('prompt');
+var prompt = require('./_node_modules/prompt');
+
+// Podaci za prvu sekciju
+var defaultFields = [
+    { name: 'collection', description: 'Collection name (jedna reč)', required: true },
+    { name: 'title', description: 'Application title', required: true },
+    { name: 'modalTitleAdd', description: 'Modal title for Add', required: true },
+    { name: 'modalTitleView', description: 'Modal title for View', required: true },
+    { name: 'modalTitleEdit', description: 'Modal title for Edit', required: true },
+    { name: 'modalTitleDelete', description: 'Modal title for Delete', required: true },
+    { name: 'growlSuccessAdd', description: 'Growl success for Add', required: true },
+    { name: 'growlSuccessEdit', description: 'Growl success for Edit', required: true },
+    { name: 'growlSuccessDelete', description: 'Growl success for Delete', required: true }
+];
+
+var allowedFieldTypes = ['txt', 'mail', 'number', 'password', 'date'];
+
+// Pokretanje prompta za prvu sekciju
+prompt.start();
+prompt.get(defaultFields, function (err, result) {
+    if (err) {
+        console.error('Greška pri unosu podataka:', err);
+        return;
+    }
+
+    // Sadržaj prve sekcije
+    var fileContent = '';
+    for (var key in result) {
+        fileContent += key + '=' + result[key] + '\n';
+    }
+    fileContent += '---\n'; // Separator
+
+    // Prompt za drugu sekciju - polja
+    var fields = [];
+    var counter = 1;
+
+    function addField() {
+        console.log('Unesite ime i tip polja br. ' + counter + ' ili pritisnite Enter za kraj unosa:');
+        prompt.get(
+            [
+                { name: 'fieldName', description: 'Field name (jedna reč)', pattern: /^\w*$/, message: 'Ime polja mora biti jedna reč', required: false },
+                {
+                    name: 'fieldType',
+                    description: 'Field type (' + allowedFieldTypes.join(', ') + ')',
+                    conform: function(value) { return allowedFieldTypes.indexOf(value) >= 0 || value === ''; },
+                    message: 'Tip polja mora biti jedan od sledećih: ' + allowedFieldTypes.join(', '),
+                    required: false
+                }
+            ],
+            function (err, fieldResult) {
+                if (err) {
+                    console.error('Greška pri unosu polja:', err);
+                    return;
+                }
+
+                // Provera za kraj unosa
+                if (!fieldResult.fieldName && !fieldResult.fieldType) {
+                    // Zapisivanje fajla nakon unosa svih polja
+                    fileContent += fields.join('\n') + '\n';
+                    var fileName = result.collection + '.txt';
+
+                    fs.writeFile(fileName, fileContent, function (err) {
+                        if (err) {
+                            console.error('Greška pri pisanju fajla:', err);
+                        } else {
+                            console.log('Fajl "' + fileName + '" je uspešno kreiran!');
+                        }
+                    });
+                    return;
+                }
+
+                // Dodavanje polja u sadržaj fajla
+                if (fieldResult.fieldName && fieldResult.fieldType) {
+                    fields.push(fieldResult.fieldName + counter + ',' + fieldResult.fieldType);
+                    counter++;
+                } else {
+                    console.error('Ime polja i tip su obavezni.');
+                }
+
+                // Nastavak unosa
+                addField();
+            }
+        );
+    }
+
+    // Pokretanje unosa polja
+    addField();
+});
