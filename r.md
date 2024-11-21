@@ -57,23 +57,7 @@ U suprotnom, skript se prekida.
 Napomena
 Skript zahteva da određeni šabloni (npr. meteor2.5.2, _node_modules) budu prisutni u direktorijumu iz kog se pokreće.
 Predviđen je za razvojne svrhe, tako da se podrazumeva da imate instaliran Meteor.js.
-css
-Copy code
 
-Ovo je formatiran sadržaj u Markdown-u koji jasno prikazuje sve delove skripta i instrukcije za korišćenje. 😊
-
-
-
-
-
-You said:
-nije potreban script u md, samo funkcije i opis za koriscenje
-ChatGPT said:
-ChatGPT
-Evo isključivo funkcija i opisa za korišćenje u Markdown formatu:
-
-markdown
-Copy code
 # Funkcije i Opis za Korišćenje Bash Skripta
 
 Ovaj Bash skript pomaže u kreiranju i konfiguraciji Meteor.js aplikacije sa unapred definisanim paketima, šablonima i direktorijumima.
@@ -146,24 +130,6 @@ Greške:
 Ako se skript pokrene bez parametara, prikazuje poruku o grešci:
 Copy code
 Niste zadali ulazne parametre!
-css
-Copy code
-
-Ovaj Markdown format jasno opisuje funkcionalnosti i način korišćenja skripta bez prikazivanja koda. 😊
-
-
-
-
-
-You said:
-mGenFirst
-File
-sta radi ovaj program, daj mi uputstvo u md:
-ChatGPT said:
-ChatGPT
-Primio sam datoteku pod nazivom mGenFirst. Da bih dao tačno uputstvo u Markdown formatu o funkcionalnosti programa, potrebno je da analiziram sadržaj datoteke.
-
-Daj mi trenutak da pročitam datoteku.
 
 Na osnovu sadržaja datoteke mGenFirst, čini se da je to Node.js skripta koja koristi nekoliko biblioteka, uključujući:
 
@@ -210,17 +176,6 @@ Otvorite skriptu mGenFirst.js.
 Pronađite sekciju koja definiše strukturu projekta i prilagodite je po potrebi.
 Da li želite detalje o konkretnim funkcijama ili prilagodbu ovog programa za vaše specifične potrebe? ​​
 
-
-
-
-
-
-You said:
-moze li ovaj text u md
-ChatGPT said:
-ChatGPT
-Naravno! Evo teksta formatiranog u Markdownu:
-
 markdown
 Copy code
 # **Uputstvo za korišćenje alata mGenFirst**
@@ -254,23 +209,7 @@ Ako želite da prilagodite strukturu ili sadržaj generisanih fajlova:
 
 Otvorite skriptu mGenFirst.js.
 Pronađite sekciju koja definiše strukturu projekta i prilagodite je po potrebi.
-css
-Copy code
 
-Da li je ovo odgovarajuće za vaše potrebe?
-
-
-
-
-
-You said:
-daj mi kompletnu analizu u md
-ChatGPT said:
-ChatGPT
-Naravno! Evo kompletne analize formirane u Markdown formatu:
-
-markdown
-Copy code
 # **Analiza programa `mGenFirst`**
 
 ## **Opis programa**
@@ -317,35 +256,15 @@ Interaktivna funkcija koja postavlja korisniku pitanje i prima ulaz:
 - Prihvata opcije `Y`, `y` ili prazan unos kao potvrdu.
 - Bilo koji drugi unos tretira se kao negativan odgovor.
 
-#### **Kod:**
-```bash
-function ask() {
-    printf "$@"
-    printf ' [Y/n] ' ;
-    read -s -n 1 key
-    case $key in
-        ""|"y"|"Y") return 0 ;;
-        *) return 1 ;;
-    esac
-}
 2. Manipulacija direktorijumima i fajlovima
 Kreira glavni direktorijum za projekat.
 Uklanja nepotrebne fajlove pomoću rm -f.
 Kopira sadržaj iz unapred pripremljenog šablona.
-Kod:
-bash
-Copy code
-mkdir $1
-cd ${current_dir}/$1
-rm -f $1.*
+
 3. Dodavanje i uklanjanje paketa
 Dodaje korisne pakete koristeći printf za informisanje korisnika o svakom dodatom paketu.
 Uklanja default pakete.
-Kod:
-bash
-Copy code
-printf "${Yellow}+ account-base ${Green}[A user account system]${NC}\n"
-printf "${Yellow}- autopublish ${Green}[Publish the entire database to all clients]${NC}\n"
+
 4. Kopiranje šablona
 Kopira osnovne fajlove i direktorijume za aplikaciju iz šablona:
 
@@ -386,63 +305,6 @@ Nova Meteor JS aplikacija http://localhost:3000 -> /path/to/MyApp?
 [Y/n]
 Kreiranje aplikacije:
 
-Copy code
-Start...
-Kreiranje Meteor JS aplikacije
-Brisanje autogenerisanih fajlova.
-Manipulacija meteor paketima.
-Gotova priprema!
-Kopiranje!
-Završni korak:
-
-makefile
-Copy code
-mGenFirst: Kostur!
-mGen_c: Kolekcije!
-Prekid skripte
-Ako korisnik unese n ili bilo koji drugi nevalidan unos:
-
-bash
-Copy code
-Prekid!
-Napomena
-Skripta je prilagođena za specifičnu verziju Meteor JS šablona (meteor2.5.2).
-Prilikom modifikacije, obratite pažnju na putanje i zavisnosti.
-Zaključak
-mGenFirst je moćan alat za brzu inicijalizaciju Meteor JS projekata. Njegova upotreba značajno ubrzava proces kreiranja aplikacije, smanjujući vreme potrebno za postavljanje početnog okruženja.
-
-css
-Copy code
-
-Da li je ovo zadovoljavajuće za vas? 😊
-
-
-
-
-
-You said:
-mGen_c
-File
-daj mi i uputstvo za koriscenje, ali sve u md
-ChatGPT said:
-ChatGPT
-Razmotriću i ovaj fajl kako bih dao uputstvo za korišćenje. Samo trenutak.
-
-Nažalost, ne mogu da pristupim sadržaju učitanog fajla direktno. Možete li podeliti deo koda iz fajla ovde? Takođe, ako postoji nešto specifično što želite da analiziram ili uključim u Markdown uputstvo, molim vas da pojasnite. ​​
-
-
-
-
-
-
-You said:
-moze li na osnovu ovog, ali u md  to je deo mGen_c
-ChatGPT said:
-ChatGPT
-Na osnovu vašeg opisa i sadržaja programa, mogu kreirati Markdown dokument sa analizom i uputstvom za korišćenje programa mGen_c. Evo kompletnog formata:
-
-markdown
-Copy code
 # mGen_c Script
 
 ## Pregled
@@ -508,221 +370,6 @@ Ako želite da proširite funkcionalnost skripte, možete izmeniti njen sadržaj
 
 Autor i održavanje
 Skripta je razvijena za Meteor JS aplikacije kao deo šablona za ubrzanje razvoja.
-
-perl
-Copy code
-
-Ako imate specifične detalje iz koda ili dodatne funkcionalnosti koje bi trebalo uključiti, slobodno podelite!
-
-
-
-
-
-You said:
-evo deo koda mGen_c, daj mi uputstvo za koriscenje u md : ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//
-// Run
-//
-// Glavna funkcija
-		var mGenDo = function getP(filenames) {
-
-			console.log('Generation process started!');
-			var lineReader = require('line-reader');
-
-			filenames.forEach(function(filename) {
-				console.log("Obrađujem fajl:", filename);
-				// Postavite kod za čitanje i obradu svakog fajla
-				// Na primer, možete koristiti lineReader za svaki fajl
-				var result = {};
-				var fields = [];
-				var fieldTypes = [];
-				var isFieldSection = false;
-
-				lineReader.eachLine(filename, function(line, last) {
-					// Vaša logika za obradu linija unutar fajla
-
-					if (line.trim() === '---') {
-						// Kada naiđemo na separator, prelazimo na sekciju polja i tipova
-						isFieldSection = true;
-						return; // Preskoči ovu liniju
-					}
-
-					if (!isFieldSection) {
-						// Prva sekcija - osnovne informacije
-						var parts = line.split('=');
-						var key = parts[0].trim();
-						var value = parts[1].trim();
-						result[key] = value;
-					} else {
-						// Druga sekcija - polja i tipovi
-						var fieldParts = line.split(',');
-						var fieldName = fieldParts[0].trim();
-						var fieldType = fieldParts[1].trim();
-						fields.push(fieldName);
-						fieldTypes.push(fieldType);
-					}
-
-// Pozivamo mGenDo_ kada je fajl u potpunosti obrađen
-					if (last) {
-						mGenDo_(result, fields, fieldTypes);
-					}
-
-				});
-			});
-	}
-
-// Funkcija koja prima podatke i obrađuje ih
-
-var mGenDo_ = function getP (result, fields, fieldTypes) {
-
-	console.log("Rezultati iz prve sekcije:", result);
-	console.log("Imena polja:", fields);
-	console.log("Tipovi polja:", fieldTypes);
-
-	AnyField = "BiloSta";
-	// Clear screen
-//	console.log(clc.reset);
-	// Naslov
-	console.log(clc('m_G_e_n').rainbow);
-	// Prompt settings
-	prompt.delimiter = "'".green;
-	prompt.message = "> ".cyan;
-
-	/*	prompt.start();
-	 prompt.get(
-	 [
-	 { name: 'collection',description: 'Collection name', pattern: /^[a-z]+$/, message: 'Naziv kolekcije na MongoDB bazi ne sme biti prazan\n\t I moze sadrzavati samo mala slova!', required: true },
-	 { name: 'title', description: 'Application title', message: 'Naslov ne sme biti prazan!', required: true },
-	 { name: 'modalTitleAdd', description: 'Modal title for Add', message: 'Naslov ne sme biti prazan!', required: true },
-	 { name: 'modalTitleView', description: 'Modal title for View', message: 'Naslov ne sme biti prazan!', required: true },
-	 { name: 'modalTitleEdit', description: 'Modal title for Edit', message: 'Naslov ne sme biti prazan!', required: true },
-	 { name: 'modalTitleDelete', description: 'Modal title for Delete', message: 'Naslov ne sme biti prazan!', required: true },
-	 { name: 'growlSuccessAdd', description: 'Growl success for Add', message: 'Naslov ne sme biti prazan!', required: true },
-	 { name: 'growlSuccessEdit', description: 'Growl success for Edit', message: 'Naslov ne sme biti prazan!', required: true },
-	 { name: 'growlSuccessDelete', description: 'Growl success for Delete', message: 'Naslov ne sme biti prazan!', required: true }
-	 ],
-	 function (err, result) {*/
-	var collectionName = result.collection;
-	var collectionCapitalName = result.collection.capitalize();
-	var title = result.title;
-	var modalTitleAdd = result.modalTitleAdd;
-	var modalTitleView = result.modalTitleView;
-	var modalTitleEdit = result.modalTitleEdit;
-	var modalTitleDelete = result.modalTitleDelete;
-	var growlSuccessAdd = result.growlSuccessAdd;
-	var growlSuccessEdit = result.growlSuccessEdit;
-	var growlSuccessDelete = result.growlSuccessDelete;
-
-	// Primer korišćenja vrednosti
-	console.log("Naziv kolekcije:", collectionName);
-	console.log("Naslov aplikacije:", title);
-	console.log("Naslov za dodavanje u modal prozoru:", modalTitleAdd);
-	console.log("Uspešna poruka za dodavanje:", growlSuccessAdd);
-
-
-	var lineReader = require('line-reader');
-
-//			var AnyField_ = [];
-	var AnyField_ = new Array();
-	var AnyFieldType_ = new Array();
-	var collectionName_ = collectionName + '.txt';
-	console.log(collectionName_);
-
-// Direktno dodeljivanje (korišćenje znaka =)
-	var AnyField_ = fields;
-	var AnyFieldType_ = fieldTypes;
-
-// Test: Prikazivanje rezultata
-	console.log("AnyField_: ", AnyField_);
-	console.log("AnyFieldType_: ", AnyFieldType_);
-
-	console.log(clc('Generation proccess started!').cyan);
-	writeFile("collections/" + collectionName + ".js", header("collections/" + collectionName + ".js") + collectionsFile(collectionName));
-	writeFile("client/routers/" + collectionName + ".js", header("client/routers/" + collectionName + ".js") + routersFile(collectionName));
-	writeFile("server/publications/" + collectionName + ".js", header("server/publications/" + collectionName + ".js") + publicationsFile(collectionName));
-	//writeFile("client/subscriptions/" + collectionName + ".js", header("client/subscriptions/" + collectionName + ".js") + subscriptionsFile(collectionName));
-	writeFile("client/views/" + collectionName + ".html", headerHTML("client/views/" + collectionName + ".html") + templateFile(collectionName, collectionCapitalName));
-	writeFile("client/views/" + collectionName + ".js", header("client/views/" + collectionName + ".js") + templateJSFile(collectionName, collectionCapitalName, AnyField_, AnyFieldType_));
-	writeFile("client/lib/i18n_" + collectionName + ".js", header("client/lib/i18n_" + collectionName + ".js") + i18nFile(collectionName, title, modalTitleAdd, modalTitleView, modalTitleEdit, modalTitleDelete, growlSuccessAdd, growlSuccessEdit, growlSuccessDelete, AnyField_));
-	var fs = require('fs')
-	/*						<li><a href="/#"></a></li>
-	 <li><a href="/#"></a></li>*/
-
-	fs.readFile("client/views/components/dashboardLayout.html", 'utf8', function (err, data) {
-		if (err) {
-			return console.log(err);
-		}
-		var result = data.replace(/#"></g, collectionName + '">' + collectionName + '</a></li><li><a href="/#"><');
-//						result = result.replace(/a></g, 'a>' + collectionName + '</li><li><a href="/#"></a><');
-		fs.writeFile("client/views/components/dashboardLayout.html", result, 'utf8', function (err) {
-			if (err) return console.log(err);
-		});
-	});
-	console.log("End of generation!");
-
-	const path = './_node_modules';
-
-// Umesto streličaste funkcije, koristimo običnu funkciju
-//	fs.rm(path, { recursive: true, force: true }, (err) => {
-	fs.rm(path, {recursive: true, force: true}, function (err) {
-		if (err) {
-			console.error('Došlo je do greške pri brisanju direktorijuma:', err);
-		} else {
-			console.log('Pomocni direktorijum _node_modules je uspešno obrisan');
-		}
-	});
-
-}
-// Funkcija za preuzimanje svih fajlova u trenutnom folderu
-var getTxtFiles = function() {
-	var filenames = [];
-	fs.readdirSync('.').forEach(function(file) {
-		if (file.endsWith('.txt')) {
-			filenames.push(file);
-		}
-	});
-	return filenames;
-};
-
-// Pokretanje funkcije
-var filenames = getTxtFiles();
-if (filenames.length > 0) {
-	console.log("Pokrećem obradu sa sledećim fajlovima:");
-	filenames.forEach(function(filename) {
-		console.log(filename);
-	});
-	mGenDo(filenames); // Pozivanje funkcije sa listom fajlova
-} else {
-	console.log("Nema .txt fajlova u trenutnom folderu.");
-}
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// Start rada
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-getTxtFiles();
-
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// Primer za visestruki input numerickih brojeva
-//var arr = [];
-//function getAnother() {
-//	prompt.get('number', function(err, result) {
-//		if (err) done();
-//		else {
-//			arr.push(parseInt(result.number, 10));
-//			getAnother();
-//		}
-//	})
-//}
-//function done() {
-//	console.log(arr);
-//}
-//prompt.start();
-//getAnother();
-ChatGPT said:
-ChatGPT
-markdown
-Copy code
-# mGen_c Skripta
 
 ## Pregled
 `mGen_c` je alat za automatizaciju procesa generisanja kolekcija, fajlova i odgovarajućih struktura u okviru **Meteor JS** aplikacija. Skripta obrađuje `.txt` fajlove u trenutnom direktorijumu kako bi generisala neophodne fajlove i podešavanja za razvoj aplikacije.
@@ -1041,105 +688,6 @@ Copy code
 Ako su potrebne dodatne izmene ili detalji, slobodno ih navedite!
 
 
-
-
-
-You said:
-pardon nisam dao kod: #!/usr/bin/env node
-var fs = require('fs');
-//var prompt = require('prompt');
-var prompt = require('./_node_modules/prompt');
-
-// Podaci za prvu sekciju
-var defaultFields = [
-    { name: 'collection', description: 'Collection name (jedna reč)', required: true },
-    { name: 'title', description: 'Application title', required: true },
-    { name: 'modalTitleAdd', description: 'Modal title for Add', required: true },
-    { name: 'modalTitleView', description: 'Modal title for View', required: true },
-    { name: 'modalTitleEdit', description: 'Modal title for Edit', required: true },
-    { name: 'modalTitleDelete', description: 'Modal title for Delete', required: true },
-    { name: 'growlSuccessAdd', description: 'Growl success for Add', required: true },
-    { name: 'growlSuccessEdit', description: 'Growl success for Edit', required: true },
-    { name: 'growlSuccessDelete', description: 'Growl success for Delete', required: true }
-];
-
-var allowedFieldTypes = ['txt', 'mail', 'number', 'password', 'date'];
-
-// Pokretanje prompta za prvu sekciju
-prompt.start();
-prompt.get(defaultFields, function (err, result) {
-    if (err) {
-        console.error('Greška pri unosu podataka:', err);
-        return;
-    }
-
-    // Sadržaj prve sekcije
-    var fileContent = '';
-    for (var key in result) {
-        fileContent += key + '=' + result[key] + '\n';
-    }
-    fileContent += '---\n'; // Separator
-
-    // Prompt za drugu sekciju - polja
-    var fields = [];
-    var counter = 1;
-
-    function addField() {
-        console.log('Unesite ime i tip polja br. ' + counter + ' ili pritisnite Enter za kraj unosa:');
-        prompt.get(
-            [
-                { name: 'fieldName', description: 'Field name (jedna reč)', pattern: /^\w*$/, message: 'Ime polja mora biti jedna reč', required: false },
-                {
-                    name: 'fieldType',
-                    description: 'Field type (' + allowedFieldTypes.join(', ') + ')',
-                    conform: function(value) { return allowedFieldTypes.indexOf(value) >= 0 || value === ''; },
-                    message: 'Tip polja mora biti jedan od sledećih: ' + allowedFieldTypes.join(', '),
-                    required: false
-                }
-            ],
-            function (err, fieldResult) {
-                if (err) {
-                    console.error('Greška pri unosu polja:', err);
-                    return;
-                }
-
-                // Provera za kraj unosa
-                if (!fieldResult.fieldName && !fieldResult.fieldType) {
-                    // Zapisivanje fajla nakon unosa svih polja
-                    fileContent += fields.join('\n') + '\n';
-                    var fileName = result.collection + '.txt';
-
-                    fs.writeFile(fileName, fileContent, function (err) {
-                        if (err) {
-                            console.error('Greška pri pisanju fajla:', err);
-                        } else {
-                            console.log('Fajl "' + fileName + '" je uspešno kreiran!');
-                        }
-                    });
-                    return;
-                }
-
-                // Dodavanje polja u sadržaj fajla
-                if (fieldResult.fieldName && fieldResult.fieldType) {
-                    fields.push(fieldResult.fieldName + counter + ',' + fieldResult.fieldType);
-                    counter++;
-                } else {
-                    console.error('Ime polja i tip su obavezni.');
-                }
-
-                // Nastavak unosa
-                addField();
-            }
-        );
-    }
-
-    // Pokretanje unosa polja
-    addField();
-});
-ChatGPT said:
-ChatGPT
-markdown
-Copy code
 # `gen_txt` - Skripta za Generisanje `.txt` Fajlova
 
 `gen_txt` je skripta koja omogućava kreiranje `.txt` fajlova sa informacijama o kolekcijama, poljima i njihovim tipovima. Ovi fajlovi su ulaz za skripte poput **`mGen_c`**, koje generišu kod na osnovu ovih podataka.
