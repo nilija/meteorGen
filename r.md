@@ -3091,7 +3091,7 @@ Copy code
 
 To je kompletan **Markdown** dokument sa svim detaljima i objašnjenjima kako koristiti četiri skripte. Sada možeš da kopiraš, čitaš i koristiš ceo proces u jednom fajlu. Ako ima još nešto što treba dodati ili promeniti, slobodno javi!
 
-
+---
 
 
 
