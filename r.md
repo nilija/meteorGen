@@ -76,6 +76,7 @@ Ovaj Bash skript pomaže u kreiranju i konfiguraciji Meteor.js aplikacije sa una
 **Sintaksa**:
 ```bash
 ask "Da li želite da nastavite?"  # Primer pitanja
+```
 Opis Korišćenja Skripta
 Pokretanje Skripta
 Skript se pokreće iz terminala sa sledećom komandom:
@@ -215,7 +216,7 @@ Pronađite sekciju koja definiše strukturu projekta i prilagodite je po potrebi
 ## **Opis programa**
 `mGenFirst` je Bash skripta dizajnirana da generiše osnovnu strukturu Meteor JS aplikacije. Cilj programa je automatizacija postavljanja početne konfiguracije, uključujući kreiranje direktorijuma, inicijalizaciju projekta i dodavanje neophodnih paketa i fajlova.
 
----
+```
 
 ## **Osnovne funkcionalnosti**
 1. **Interaktivno postavljanje aplikacije**:
@@ -248,7 +249,7 @@ Pronađite sekciju koja definiše strukturu projekta i prilagodite je po potrebi
    - Pokreće `mGenFirst` za kreiranje osnovnog kostura aplikacije.
    - Pokreće `mGen_c` za generisanje kolekcija baze podataka.
 
----
+```
 
 ## **Detaljna analiza funkcija**
 ### 1. **`ask` funkcija**
