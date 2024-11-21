@@ -623,7 +623,7 @@ Copy code
 
 `gen_txt` je skripta namenjena generisanju `.txt` fajlova koji služe kao ulazni podaci za skriptu **`mGen_c`**. Ovi fajlovi definišu osnovne informacije o kolekciji, kao i polja i njihove tipove.
 
----
+```
 
 ## Funkcionalnosti
 
@@ -634,7 +634,7 @@ Copy code
    - Poruke za uspešne operacije
 3. Definisanje polja i njihovih tipova.
 
----
+```
 
 ## Primer Generisanog `.txt` Fajla
 
@@ -650,7 +650,7 @@ modalTitleDelete=Delete Product
 growlSuccessAdd=Product successfully added!
 growlSuccessEdit=Product successfully updated!
 growlSuccessDelete=Product successfully deleted!
----
+```
 name,String
 price,Number
 description,String
@@ -693,7 +693,7 @@ Ako su potrebne dodatne izmene ili detalji, slobodno ih navedite!
 
 `gen_txt` je skripta koja omogućava kreiranje `.txt` fajlova sa informacijama o kolekcijama, poljima i njihovim tipovima. Ovi fajlovi su ulaz za skripte poput **`mGen_c`**, koje generišu kod na osnovu ovih podataka.
 
----
+```
 
 ## Funkcionalnosti
 
@@ -701,7 +701,7 @@ Ako su potrebne dodatne izmene ili detalji, slobodno ih navedite!
 2. Dinamički unos polja sa definicijom njihovih tipova.
 3. Generisanje `.txt` fajlova u formatu pogodnom za dalju obradu.
 
----
+```
 
 ## Instalacija
 
@@ -724,7 +724,7 @@ modalTitleDelete=Delete Product
 growlSuccessAdd=Product successfully added!
 growlSuccessEdit=Product successfully updated!
 growlSuccessDelete=Product successfully deleted!
----
+```
 name1,txt
 price2,number
 description3,txt
@@ -795,7 +795,7 @@ Copy code
 
 Ovo uputstvo opisuje korišćenje četiri skripte **`gen_txt`**, **`mGenFirst`**, **`mGen_c`**, i **`mtemplateCopy`** koje omogućavaju kreiranje, generisanje i kopiranje aplikacijskog koda na osnovu unosa korisnika. Skripte su osmišljene za olakšavanje generisanja koda na osnovu `.txt` fajlova koji sadrže strukturu kolekcija i polja.
 
----
+```
 
 ## Skripte
 
@@ -826,7 +826,7 @@ modalTitleDelete=Delete Product
 growlSuccessAdd=Product successfully added!
 growlSuccessEdit=Product successfully updated!
 growlSuccessDelete=Product successfully deleted!
----
+```
 name1,txt
 price2,number
 description3,txt
@@ -922,7 +922,7 @@ Copy code
 
 Ovaj dokument pruža sveobuhvatan pregled korišćenja četiri skripte: **`gen_txt`**, **`mtemplateCopy`**, **`mGenFirst`**, i **`mGen_c`**, u procesu generisanja aplikacijskog koda. Cilj ovih skripti je olakšavanje razvoja aplikacija generisanjem potrebnih fajlova i šablona na osnovu unetih podataka o kolekcijama i njihovim poljima.
 
----
+```
 
 ## Pregled Procesa
 
@@ -953,7 +953,7 @@ modalTitleDelete=Delete User
 growlSuccessAdd=User successfully added!
 growlSuccessEdit=User successfully updated!
 growlSuccessDelete=User successfully deleted!
----
+```
 username,txt
 email,mail
 password,password
@@ -1052,7 +1052,7 @@ Copy code
 
 Ovaj dokument objašnjava kako koristiti četiri skripte (**`gen_txt`**, **`mtemplateCopy`**, **`mGenFirst`**, i **`mGen_c`**) za generisanje kompletne aplikacijske strukture. Skripte omogućavaju efikasno kreiranje koda i šablona na osnovu definisanih kolekcija i njihovih polja.
 
----
+```
 
 ## Pregled Procesa
 
@@ -1083,7 +1083,7 @@ modalTitleDelete=Delete User
 growlSuccessAdd=User successfully added!
 growlSuccessEdit=User successfully updated!
 growlSuccessDelete=User successfully deleted!
----
+```
 username,txt
 email,mail
 password,password
@@ -1191,7 +1191,7 @@ Copy code
 
 Ovaj dokument objašnjava kako koristiti četiri skripte (**`gen_txt`**, **`mtemplateCopy`**, **`mGenFirst`**, i **`mGen_c`**) za generisanje kompletne aplikacijske strukture. Skripte omogućavaju efikasno kreiranje koda i šablona na osnovu definisanih kolekcija i njihovih polja.
 
----
+```
 
 ## Pregled Procesa
 
@@ -1222,7 +1222,7 @@ modalTitleDelete=Delete User
 growlSuccessAdd=User successfully added!
 growlSuccessEdit=User successfully updated!
 growlSuccessDelete=User successfully deleted!
----
+```
 username,txt
 email,mail
 password,password
@@ -1322,7 +1322,7 @@ moze li sve ovo u md formatu, kao jedan  md fajl: # Kompleksan Proces Generisanj
 
 Ovaj dokument objašnjava kako koristiti četiri skripte (**gen_txt**, **mtemplateCopy**, **mGenFirst**, i **mGen_c**) za generisanje kompletne aplikacijske strukture. Skripte omogućavaju efikasno kreiranje koda i šablona na osnovu definisanih kolekcija i njihovih polja.
 
----
+```
 
 ## Pregled Procesa
 
@@ -1354,7 +1354,7 @@ modalTitleDelete=Delete User
 growlSuccessAdd=User successfully added!
 growlSuccessEdit=User successfully updated!
 growlSuccessDelete=User successfully deleted!
----
+```
 username,txt
 email,mail
 password,password
@@ -1451,7 +1451,7 @@ Copy code
 
 Ovaj dokument objašnjava kako koristiti četiri skripte (**`gen_txt`**, **`mtemplateCopy`**, **`mGenFirst`**, i **`mGen_c`**) za generisanje kompletne aplikacijske strukture. Skripte omogućavaju efikasno kreiranje koda i šablona na osnovu definisanih kolekcija i njihovih polja.
 
----
+```
 
 ## Pregled Procesa
 
@@ -1482,7 +1482,7 @@ modalTitleDelete=Delete User
 growlSuccessAdd=User successfully added!
 growlSuccessEdit=User successfully updated!
 growlSuccessDelete=User successfully deleted!
----
+```
 username,txt
 email,mail
 password,password
@@ -1592,7 +1592,7 @@ Copy code
 
 Ovaj dokument objašnjava kako koristiti četiri skripte (**`gen_txt`**, **`mtemplateCopy`**, **`mGenFirst`**, i **`mGen_c`**) za generisanje kompletne aplikacijske strukture. Skripte omogućavaju efikasno kreiranje koda i šablona na osnovu definisanih kolekcija i njihovih polja.
 
----
+```
 
 ## Pregled Procesa
 
@@ -1623,7 +1623,7 @@ modalTitleDelete=Delete User
 growlSuccessAdd=User successfully added!
 growlSuccessEdit=User successfully updated!
 growlSuccessDelete=User successfully deleted!
----
+```
 username,txt
 email,mail
 password,password
@@ -1733,7 +1733,7 @@ Copy code
 
 Ovaj dokument objašnjava kako koristiti četiri skripte (**`gen_txt`**, **`mtemplateCopy`**, **`mGenFirst`**, i **`mGen_c`**) za generisanje kompletne aplikacijske strukture. Skripte omogućavaju efikasno kreiranje koda i šablona na osnovu definisanih kolekcija i njihovih polja.
 
----
+```
 
 ## Pregled Procesa
 
@@ -1764,7 +1764,7 @@ modalTitleDelete=Delete User
 growlSuccessAdd=User successfully added!
 growlSuccessEdit=User successfully updated!
 growlSuccessDelete=User successfully deleted!
----
+```
 username,txt
 email,mail
 password,password
@@ -1941,7 +1941,7 @@ Copy code
 
 Ovaj dokument objašnjava kako koristiti četiri skripte (**`gen_txt`**, **`mtemplateCopy`**, **`mGenFirst`**, i **`mGen_c`**) za generisanje kompletne aplikacijske strukture. Skripte omogućavaju efikasno kreiranje koda i šablona na osnovu definisanih kolekcija i njihovih polja.
 
----
+```
 
 ## Pregled Procesa
 
@@ -1974,7 +1974,7 @@ modalTitleDelete=Delete User
 growlSuccessAdd=User successfully added!
 growlSuccessEdit=User successfully updated!
 growlSuccessDelete=User successfully deleted!
----
+```
 username,txt
 email,mail
 password,password
@@ -2073,11 +2073,11 @@ client/lib/
 yaml
 Copy code
 
----
+```
 
 To je kompletan **Markdown** dokument sa svim detaljima i objašnjenjima kako koristiti četiri skripte. Sada možeš da kopiraš, čitaš i koristiš ceo proces u jednom fajlu. Ako ima još nešto što treba dodati ili promeniti, slobodno javi!
 
----
+```
 
 
 
