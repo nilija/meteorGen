@@ -46,8 +46,9 @@ Skripta **`mtemplateCopy`** kopira:
 Pokrenite skriptu sa sledećim argumentom:
 ```bash
 mtemplateCopy <direktorijum na /home/x/meteor_gen/gen/ ispod kojeg će biti sajt>
+```
 #### Primer:
-```bash
+
 mtemplateCopy MyApp
 
 - Napraviće sajt na:
@@ -74,9 +75,8 @@ Pre pokretanja, instalirajte paket **`line-reader`**:
 ```bash
 npm install line-reader
 
-
-TO-DO
-meteor app za kreiranje opisa kolekcije
+### TO-DO
+- Napraviti **Meteor** aplikaciju za kreiranje opisa kolekcije.
 
 ------------------------------------------------------------------
 
