@@ -57,7 +57,7 @@ mtemplateCopy MyApp
   - **URL**: `http://localhost:3000`
   - **Lokacija**: `/home/x/meteor_gen/gen/MyApp`
 
-# Automatski poziva `mGenFirst` i `mGen_c`
+### Automatski poziva `mGenFirst` i `mGen_c`
 
 1. **Pozivanje `mGenFirst`**:
    - Kreira osnovni kostur i stablo projekta.
