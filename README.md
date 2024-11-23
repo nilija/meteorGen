@@ -54,18 +54,17 @@ Ova skripta generiše `.txt` fajlove koji definišu kolekcije i njihova polja.
    ```bash
    node gen_txt.js
    ```
-### Unesite osnovne informacije o kolekciji:
+### 2. Unesite osnovne informacije o kolekciji:
 - **Naziv kolekcije** (jedna reč, npr. `users`).
 - **Naslov aplikacije** i naslove modalnih prozora (npr. za dodavanje, pregled, uređivanje, brisanje).
 - **Poruke uspeha** za različite operacije (dodavanje, uređivanje, brisanje).
 - **Dodajte polja** sa njihovim imenima i tipovima:
   - Dozvoljeni tipovi: `txt`, `mail`, `number`, `password`, `date`.
 
-Na kraju unosa, skripta kreira `.txt` fajl.
+### Na kraju unosa, skripta kreira `.txt` fajl.
 Primer `.txt` fajla:
 
 ```plaintext
-Copy code
 collection=users
 title=User Management
 modalTitleAdd=Add User
@@ -85,16 +84,20 @@ age,number
 
 Skripta `mtemplateCopy` koristi `.txt` fajlove kreirane pomoću `gen_txt` za generisanje osnovne projektne strukture. Skripta automatski poziva `mGenFirst` i `mGen_c`.
 
-Koraci:
-Pokrenite skriptu:
-bash
-Copy code
-node mtemplateCopy.js
-Skripta automatski prepoznaje .txt fajlove i započinje generisanje:
-Poziva mGenFirst za osnovne fajlove.
-Poziva mGen_c za dodatne šablone i kod.
-Rezultat:
-Svi potrebni fajlovi i šabloni za definisane kolekcije su generisani.
+### Koraci:
+
+1. Pokrenite skriptu:
+   ```bash
+   node mtemplateCopy.js
+
+Skripta automatski prepoznaje `.txt` fajlove i započinje generisanje:
+- Poziva **`mGenFirst`** za osnovne fajlove.
+- Poziva **`mGen_c`** za dodatne šablone i kod.
+
+---
+
+### Rezultat:
+- Svi potrebni fajlovi i šabloni za definisane kolekcije su generisani.
 
 ### 3. **`mGenFirst`** - Generisanje Osnovnih Fajlova
 
@@ -171,6 +174,6 @@ client/views/
 server/publications/
 client/lib/
 ```
-Napomene
-Proverite da su svi .txt fajlovi validni pre pokretanja skripti.
-Za pitanja i podršku, možete se obratiti dokumentaciji projekta.
+### Napomene
+- Proverite da su svi `.txt` fajlovi validni pre pokretanja skripti.
+- Za pitanja i podršku, možete se obratiti dokumentaciji projekta.
