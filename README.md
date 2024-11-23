@@ -1,4 +1,6 @@
-ava efikasno kreiranje Grid aplikacija na osnovu definisanih kolekcija.
+## meteorGen - Generator Grid Aplikacija za Unix/Ubuntu
+
+Meteor generator omogućava efikasno kreiranje Grid aplikacija na osnovu definisanih kolekcija.
 
 ---
 
@@ -57,7 +59,7 @@ mtemplateCopy MyApp
 
 ---
 
-### Dalji Koraci
+# Automatski poziva `mGenFirst` i `mGen_c`
 
 1. **Pozivanje `mGenFirst`**:
    - Kreira osnovni kostur i stablo projekta.
@@ -74,7 +76,7 @@ mtemplateCopy MyApp
 Pre pokretanja, instalirajte paket **`line-reader`**:
 ```bash
 npm install line-reader
-
+```
 ### TO-DO
 - Napraviti **Meteor** aplikaciju za kreiranje opisa kolekcije.
 
