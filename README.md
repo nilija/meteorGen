@@ -1,27 +1,79 @@
-# meteorGen   ----------------------------> za Unix/UBUNTU
-Meteor, generator Grid aplikacija
+ava efikasno kreiranje Grid aplikacija na osnovu definisanih kolekcija.
 
-Kopira se u radni folder.
-po kopiranju kreirajte opise kolekcija.
+---
 
-Opis fajla za kreiranje kolekcije je u template colfile.txt,
-moze se direktno intervenisati u fajlu ili kreirati novi, sa drugim imenom
-pozivanjem scripta  gen_txt ili gen_txt_file
-Unesite ime polja:
-Unesite tip polja (txt, mail, number, password, date, checkbox, radio):
+## Koraci za Korišćenje
 
-Po formiranju txt fajlova sa opisom kolekcija - poziva se script mtemplateCopy,
-koji kopira .meteor, node_module i strukturu - projekat i fajlove putem kojih se vrsi generisanje
+### 1. Kopiranje Radnog Foldera
+Kopirajte sadržaj u radni folder. Nakon kopiranja, kreirajte opise kolekcija.
 
-Korišćenje - mtemplateCopy <direktorijum na /home/x/meteor_gen/gen/ ispod kojeg će biti sajt>
-   Primer:   mtemplateCopy MyApp - napraviće sajt http://localhost:3000 na /home/x/meteor_gen/gen/MyApp
+---
 
-Zatim se poziva mGenFirst, kreira kostur, stablo projekta.
+### 2. Kreiranje Opisa Kolekcija
+Opis fajla za kreiranje kolekcije se nalazi u šablonu **`colfile.txt`**. Postoje dva načina za izmenu:
 
-Zatim mGen_c, generator čita imekolekcije.txt (imenovati fajl kao kolekciju koja se generiše),
-čita pojedinačne redove sa imenima polja i generiše redove u odgovarajućim fajlovima JS.
+1. **Direktno uređivanje** fajla.
+2. **Kreiranje novog fajla** pomoću skripti:
+   - **`gen_txt`**
+   - **`gen_txt_file`**
 
-Prethodno je potrebno instalirati paket line-reader: npm install line-reader
+#### Unos Podataka:
+- **Ime polja**: Unesite naziv polja.
+- **Tip polja**: Dozvoljeni tipovi su:
+  - `txt`
+  - `mail`
+  - `number`
+  - `password`
+  - `date`
+  - `checkbox`
+  - `radio`
+
+---
+
+### 3. Generisanje Projekta
+1. Nakon formiranja `.txt` fajlova sa opisima kolekcija, pozovite skriptu **`mtemplateCopy`**:
+   ```bash
+   mtemplateCopy <ime-direktorijuma>
+Skripta **`mtemplateCopy`** kopira:
+- `.meteor`
+- `node_module`
+- Strukturu projekta i fajlove za generisanje.
+
+---
+
+### Korišćenje Skripte `mtemplateCopy`
+
+Pokrenite skriptu sa sledećim argumentom:
+```bash
+mtemplateCopy <direktorijum na /home/x/meteor_gen/gen/ ispod kojeg će biti sajt>
+#### Primer:
+```bash
+mtemplateCopy MyApp
+
+- Napraviće sajt na:
+  - **URL**: `http://localhost:3000`
+  - **Lokacija**: `/home/x/meteor_gen/gen/MyApp`
+
+---
+
+### Dalji Koraci
+
+1. **Pozivanje `mGenFirst`**:
+   - Kreira osnovni kostur i stablo projekta.
+
+2. **Pozivanje `mGen_c`**:
+   - Generator čita fajl **`imekolekcije.txt`** (fajl imenovati prema kolekciji koja se generiše).
+   - Analizira pojedinačne redove sa imenima polja.
+   - Generiše odgovarajuće redove u odgovarajućim JavaScript fajlovima.
+
+---
+
+### Prethodni Zahtevi
+
+Pre pokretanja, instalirajte paket **`line-reader`**:
+```bash
+npm install line-reader
+
 
 TO-DO
 meteor app za kreiranje opisa kolekcije
